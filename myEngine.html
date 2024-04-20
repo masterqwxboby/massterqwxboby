@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>My.Engine Games</h1>
+            <h1>Interstellar School Game</h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -28,8 +28,8 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Welcome to My.Engine!</h2>
-            <p>I desigined this website to give you something to do when you are bored. It is not the best IK!</p>
+            <h2>Welcome to Interstellar School Games!</h2>
+            <p>I designed this website to give you something to do when you are bored. It is not the best IK!</p>
             <a href="#" class="btn">Play Now</a>
         </div>
     </section>
@@ -42,7 +42,7 @@
             <!-- Game card for Google -->
             <div class="game-card">
                 <h3>Simple Browser</h3>
-                <a href="simple-browser.html">
+                <a href="simple-browser" class="game-link">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" style="width: 100px;">
                     <p>Simple Browser</p>
                 </a>
@@ -51,7 +51,7 @@
             <!-- Game card for Flappy Bird -->
             <div class="game-card">
                 <h3>Flappy Bird</h3>
-                <a href="flappy-bird.html">
+                <a href="flappy-bird" class="game-link">
                     <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png" alt="Flappy Bird" style="width: 100px;">
                     <p>Play Flappy Bird</p>
                 </a>
@@ -60,8 +60,8 @@
             <!-- Game card for Roblox -->
             <div class="game-card">
                 <h3>Roblox</h3>
-                <a href="roblox.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Roblox_Logo_2021.png" alt="Roblox Logo" style="width: 100px;">
+                <a href="roblox" class="game-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Roblox_Logo_2021.png" alt="Roblox Logo" style="width: 150px;">
                     <p>Play Roblox</p>
                 </a>
             </div>
@@ -69,40 +69,43 @@
             <!-- Game card for Moto X3M -->
             <div class="game-card">
                 <h3>Moto X3M</h3>
-                <a href="moto-x3m.html">
+                <a href="moto-x3m" class="game-link">
                     <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee.jpg" alt="Moto X3M" style="width: 150px;">
                     <p>Play Moto X3M</p>
                 </a>
             </div>
 
-            <!-- Add more game cards as needed -->
-
-
-
+            <!-- Game card for Geometry Dash -->
             <div class="game-card">
                 <h3>Geometry Dash</h3>
-                <a href="geometry-lite.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Geometry_Dash_Logo.PNG" alt="Geometry Dash" style="width: 100px;">
+                <a href="geometry-lite" class="game-link">
+                    <img src="https://example.com/geometry-dash-icon.png" alt="Geometry Dash" style="width: 100px;">
                     <p>Play Geometry Dash</p>
                 </a>
             </div>
+
+            <!-- Add more game cards as needed -->
         </div>
-
-        
-        <!-- Game card for Geometry Dash -->
-
-       
-        
-
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 My.Engine. All rights reserved.</p>
+            <p>&copy; 2024 Interstellar School Game. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        // Intercept clicks on game links to prevent default behavior
+        document.querySelectorAll('.game-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default behavior of following the link
+                const url = this.getAttribute('href'); // Get the href attribute of the clicked link
+                window.location.href = url; // Navigate to the specified URL
+            });
+        });
+    </script>
 </body>
+
 </html>
 
 
