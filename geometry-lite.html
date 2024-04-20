@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="style.css">
     <!-- Add favicon link for Google Classroom -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png" type="image/png">
+    <!-- JavaScript for smooth scrolling and removing .html extension from links -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Remove .html extension from links
+            document.querySelectorAll('a').forEach(anchor => {
+                let href = anchor.getAttribute('href');
+                if (href && href.endsWith('.html')) {
+                    anchor.setAttribute('href', href.slice(0, -5));
+                }
+            });
+        });
+    </script>
 </head>
 
 <header>
@@ -16,7 +39,7 @@
         <h1>My.Engine Games</h1>
         <nav>
             <ul>
-                <li><a href="myEngine.html">Home</a></li>
+                <li><a href="myEngine">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#">Contact</a></li>
@@ -33,4 +56,3 @@
 </body>
 
 </html>
-
