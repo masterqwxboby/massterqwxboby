@@ -17,7 +17,7 @@
             <h1>My.Engine Games</h1>
             <nav>
                 <ul>
-                    <li><a href="myEngine.html">Home</a></li>
+                    <li><a href="myEngine">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Games</a></li>
                     <li><a href="#">Contact</a></li>
@@ -39,6 +39,22 @@
             <p>&copy; 2024 Interstellar School Game. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
+
